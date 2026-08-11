@@ -1,0 +1,16 @@
+.env
+.git
+.venv
+__pycache__
+*.pyc
+.pytest_cache
+.pytest-tmp
+.ruff_cache
+*.egg-info
+.vscode
+tests
+evals
+examples
+tmp
+data/uploads/*
+data/chroma/*

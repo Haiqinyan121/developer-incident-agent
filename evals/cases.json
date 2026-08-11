@@ -1,0 +1,186 @@
+{
+  "routing": [
+    {
+      "question": "根据我上传的手册，Redis 连接池超时应该先检查什么？",
+      "expected_tool": "search_documents"
+    },
+    {
+      "question": "从故障文档中查一下 HTTP 读取超时和连接超时的区别。",
+      "expected_tool": "search_documents"
+    },
+    {
+      "question": "容器一直 unhealthy，请依据上传的运行手册给出排查顺序。",
+      "expected_tool": "search_documents"
+    },
+    {
+      "question": "知识库中的 Go goroutine 泄漏应该怎样定位？",
+      "expected_tool": "search_documents"
+    },
+    {
+      "question": "根据内部资料说明接口持续返回 429 时如何避免重试风暴。",
+      "expected_tool": "search_documents"
+    },
+    {
+      "question": "日志显示 connection pool timeout，请检索故障手册判断候选原因。",
+      "expected_tool": "search_documents"
+    },
+    {
+      "question": "从已上传文档查询上游服务读取超时的处理原则。",
+      "expected_tool": "search_documents"
+    },
+    {
+      "question": "请引用上传的 Docker 文档解释为什么进程存在但健康检查失败。",
+      "expected_tool": "search_documents"
+    },
+    {
+      "question": "根据技术资料分析 goroutine 数量持续增长且不回落。",
+      "expected_tool": "search_documents"
+    },
+    {
+      "question": "查一下知识库里对 Retry-After 和退避重试的说明。",
+      "expected_tool": "search_documents"
+    },
+    {
+      "question": "我的博客里有没有 Redis 连接池超时相关的文章？",
+      "expected_tool": "search_articles"
+    },
+    {
+      "question": "搜索我的 Go 博客中关于 goroutine 泄漏的文章。",
+      "expected_tool": "search_articles"
+    },
+    {
+      "question": "我的博客写过 HTTP 超时排查吗？",
+      "expected_tool": "search_articles"
+    },
+    {
+      "question": "查找博客标题中包含 Docker 健康检查的文章。",
+      "expected_tool": "search_articles"
+    },
+    {
+      "question": "列出我的博客里和接口限流有关的文章。",
+      "expected_tool": "search_articles"
+    },
+    {
+      "question": "搜索个人博客里的 Go 服务故障复盘。",
+      "expected_tool": "search_articles"
+    },
+    {
+      "question": "我的技术博客中有没有连接泄漏的文章？",
+      "expected_tool": "search_articles"
+    },
+    {
+      "question": "帮我在博客标题里搜索重试风暴。",
+      "expected_tool": "search_articles"
+    },
+    {
+      "question": "查一下我的博客文章列表中是否有 Redis 排障实践。",
+      "expected_tool": "search_articles"
+    },
+    {
+      "question": "我的 Go 博客写过 context 取消问题吗？",
+      "expected_tool": "search_articles"
+    },
+    {
+      "question": "你好。",
+      "expected_tool": null
+    },
+    {
+      "question": "请用一句话介绍你能做什么。",
+      "expected_tool": null
+    },
+    {
+      "question": "把“故障排查”翻译成英文。",
+      "expected_tool": null
+    },
+    {
+      "question": "HTTP 状态码 500 表示什么？",
+      "expected_tool": null
+    },
+    {
+      "question": "给我一个排查问题时先收集证据的通用建议。",
+      "expected_tool": null
+    },
+    {
+      "question": "解释一下什么是超时。",
+      "expected_tool": null
+    },
+    {
+      "question": "将数字 1、2、3 按降序排列。",
+      "expected_tool": null
+    },
+    {
+      "question": "用一句话解释日志的作用。",
+      "expected_tool": null
+    },
+    {
+      "question": "告诉我今天上海的实时天气。",
+      "expected_tool": null
+    },
+    {
+      "question": "谢谢你的帮助。",
+      "expected_tool": null
+    }
+  ],
+  "retrieval": [
+    {
+      "query": "Redis 连接池耗尽时需要查看哪些连接指标",
+      "expected_filename": "redis_connection_timeout.md"
+    },
+    {
+      "query": "扩大连接池为什么可能掩盖连接泄漏",
+      "expected_filename": "redis_connection_timeout.md"
+    },
+    {
+      "query": "Redis 慢查询 CPU 内存 网络延迟如何联合排查",
+      "expected_filename": "redis_connection_timeout.md"
+    },
+    {
+      "query": "连接超时、读取超时和连接池超时有什么区别",
+      "expected_filename": "http_upstream_timeout.md"
+    },
+    {
+      "query": "哪些 HTTP 请求适合配置退避重试",
+      "expected_filename": "http_upstream_timeout.md"
+    },
+    {
+      "query": "盲目增加上游超时时间有什么风险",
+      "expected_filename": "http_upstream_timeout.md"
+    },
+    {
+      "query": "容器进程存在但应用还没有准备好",
+      "expected_filename": "docker_healthcheck_failure.md"
+    },
+    {
+      "query": "容器只监听 127.0.0.1 导致外部访问失败",
+      "expected_filename": "docker_healthcheck_failure.md"
+    },
+    {
+      "query": "应用启动慢时如何设置健康检查 start_period",
+      "expected_filename": "docker_healthcheck_failure.md"
+    },
+    {
+      "query": "goroutine 数量持续增长不回落怎么排查",
+      "expected_filename": "go_goroutine_leak.md"
+    },
+    {
+      "query": "channel 阻塞和 context 未取消导致后台任务泄漏",
+      "expected_filename": "go_goroutine_leak.md"
+    },
+    {
+      "query": "如何用 goroutine profile 对比重复堆栈",
+      "expected_filename": "go_goroutine_leak.md"
+    },
+    {
+      "query": "HTTP 429 应该如何根据 Retry-After 重试",
+      "expected_filename": "api_rate_limit.md"
+    },
+    {
+      "query": "无限重试为什么会形成重试风暴",
+      "expected_filename": "api_rate_limit.md"
+    },
+    {
+      "query": "多个实例同时请求导致接口超过限流窗口",
+      "expected_filename": "api_rate_limit.md"
+    }
+  ]
+}
