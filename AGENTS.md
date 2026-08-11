@@ -1,6 +1,6 @@
 # AGENTS.md
 
-- 使用 Python 3.11，目标是实现易读、可测试的轻量开发者知识库 Agent。
+- 使用 Python 3.11，目标是实现易读、可测试的研发故障诊断 Agent。
 - 仅有 `search_documents`（上传文档向量检索）和 `search_articles`（Go 博客标题搜索）两个工具。
 - 每个请求最多执行一个工具、最多调用模型两次，不得加入循环规划。
 - 不增加 LangGraph、多 Agent、长期记忆、BM25、Reranker、消息队列等重型功能。
